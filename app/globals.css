@@ -1,42 +1,113 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+.container{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.container .navbar{
+   
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.content_menu {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding: 0 20px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 200px 200px 200px 200px;
+    gap: 20px;
   }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+  
+  .content_menu a{
+    text-decoration: none;
+    color: #000;
   }
+  
+  .content_menu .con_crad{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  
+  .card:hover {
+    transform: translateY(-10px);
+    transition: 0.5s;
+    color: #fff;
+    background: #9d9eff;
+  }
+  
+  .con_crad span:hover{
+    transform: translateY(-10px);
+    transition: 0.5s;
+    color: #9d9eff;
+  }
+  
+  
+  .card .menu-items {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .card .menu-items .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card .menu-items .icons svg {
+    gap: 10px;
+    width: 50px;
+    height: 100%;
+  }
+  
+  .card .menu-items span {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    right: 200px;
+    bottom: 0;
+    width: 100%;
+    background-color: #b1b1b1;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px 0;
 }
+
+

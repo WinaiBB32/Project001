@@ -1,0 +1,117 @@
+import {
+    CiMemoPad,
+    CiGrid41,
+    CiRead,
+    CiDatabase,
+    CiLogout,
+    CiUser
+  } from "react-icons/ci";
+  import { FaBars, FaAngleDown } from "react-icons/fa6";
+  
+  export const menuItem = [
+    {
+      path: "/",
+      role: "all",
+      title: "หน้าแรก",
+      icon: <CiGrid41 />,
+      iconsub: <FaAngleDown />,
+    },
+    {
+      path: "/material",
+      role: ["user", "superuser", "admin"],
+      type: "ระบบเบิกวัสดุสำนักงาน",
+      title: "เบิกวัสดุสำนักงาน",
+      icon: <CiMemoPad />,
+      iconsub: <FaAngleDown />,
+    },
+    {
+      path: "/material/historymaterial",
+      role: ["user", "superuser", "admin"],
+      type: "ระบบเบิกวัสดุสำนักงาน",
+      title: "ประวัติเบิกวัสดุสำนักงาน",
+      icon: <CiRead />,
+      iconsub: <FaAngleDown />,
+    },
+    {
+      path: "/borrow",
+      role: ["user", "superuser", "admin"],
+      type: "ระบบยืมครุภัณฑ์",
+      title: "ยืมครุภัณฑ์",
+      icon: <CiMemoPad />,
+      iconsub: <FaAngleDown />,
+    },
+    {
+      path: "/borrow/history",
+      role: ["user", "superuser", "admin"],
+      type: "ระบบยืมครุภัณฑ์",
+      title: "ประวัติยืมครุภัณฑ์",
+      icon: <CiRead />,
+      iconsub: <FaAngleDown />,
+    },
+    {
+      path: "/manage/borrow",
+      role: ["superuser", "admin"],
+      type: "ระบบจัดการวัสดุครุภัณฑ์",
+      title: "รายการยืมครุภัณฑ์",
+      icon: <CiRead />,
+      iconsub: <FaAngleDown />,
+    },
+    {
+      path: "/manage/material",
+      role: ["superuser", "admin"],
+      type: "ระบบจัดการวัสดุครุภัณฑ์",
+      title: "รายการเบิกวัสดุ สนง.",
+      icon: <CiRead />,
+      iconsub: <FaAngleDown />,
+    },
+    {
+      path: "/manage/unit",
+      role: ["superuser", "admin"],
+      type: "ระบบจัดการวัสดุครุภัณฑ์",
+      title: "จัดการสหน่วยนับ",
+      icon: <CiDatabase />,
+      iconsub: <FaAngleDown />,
+    },
+    {
+      path: "/manage/office-material",
+      role: ["superuser", "admin"],
+      type: "ระบบจัดการวัสดุครุภัณฑ์",
+      title: "จัดการวัสดุ สนง.",
+      icon: <CiDatabase />,
+      iconsub: <FaAngleDown />,
+    },
+    {
+      path: "/manage/equipment",
+      role: ["superuser", "admin"],
+      type: "ระบบจัดการวัสดุครุภัณฑ์",
+      title: "จัดการครุภัณฑ์",
+      icon: <CiDatabase />,
+      iconsub: <FaAngleDown />,
+    },
+    {
+      path: "#",
+      title: "ADMIN",
+      role: "admin",
+      type: "ระบบจัดการบุคลากร",
+      icon: <CiUser />,
+      iconsub: <FaAngleDown />,
+      submenu: [
+        {
+          path: "/manage/personnel",
+          title: "จัดการบุลากร",
+        },
+        {
+          path: "/manage/department",
+          title: "จัดการหน่วยงาน",
+        },
+      ],
+    },
+    {
+      path: "/logout",
+      role: "all",
+      type: "all",
+      title: "ออกจากระบบ",
+      icon: <CiLogout />,
+      iconsub: <FaAngleDown />,
+    },
+  ];

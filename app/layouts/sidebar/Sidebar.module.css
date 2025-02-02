@@ -1,0 +1,129 @@
+:root{
+    /* ===== Colors ===== */
+    --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: #695CFE;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar header .toggle{
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%) rotate(180deg);
+    height: 25px;
+    width: 25px;
+    background-color: var(--primary-color);
+    color: var(--sidebar-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    transition: var(--tran-05);
+  }
+
+  .sidebar.close .toggle{
+    transform: translateY(-50%) rotate(0deg);
+  }
+  
+  .open {
+    transform: translateX(0);
+  }
+  
+  .close {
+    transform: translateX(-250px);
+  }
+  
+  .imageText {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .image {
+    margin-right: 10px;
+  }
+  
+  .text {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logoText .name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .logoText .profession {
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  .menuBar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu {
+    flex: 1;
+  }
+  
+  .menuLinks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navLink {
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navLink:hover {
+    background-color: #555;
+  }
+  
+  .navLink a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navLink a:hover {
+    text-decoration: underline;
+  }
+  
+  .navLink svg {
+    margin-right: 10px;
+  }
+  
+  .navText {
+    margin-left: 10px;
+  }

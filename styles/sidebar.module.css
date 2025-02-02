@@ -1,0 +1,62 @@
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background-color: #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease;
+}
+
+.username {
+  padding: 20px;
+  font-size: 18px;
+  background-color: #444;
+  text-align: center;
+}
+
+.sidebarButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.menuOpen {
+  display: block;
+}
+
+.menuClosed {
+  display: none;
+}
+
+.menuItem {
+  padding: 15px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.menuItem:hover {
+  background-color: #555;
+}
+
+.menuItem a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.menuItem a:hover {
+  text-decoration: underline;
+}
+
+.menuItem svg {
+  margin-right: 10px;
+}
